@@ -5,8 +5,8 @@ export default function Navbar() {
     <div className="font-sans h-30 p-11 flex flex-row items-center justify-between">
       <div className="flex flex-row gap-2 items-center justify-between">
         <div className="h-7 w-7 rounded-full bg-cover bg-center bg-[url('/images/logo.jpg')]"></div>
-        <div className="font-bold font-mono text-xl text-white">
-          Coder<span className="text-blue-400" >Box</span>
+          <div className="font-mono font-semibold text-xl text-white">
+            Coder<span className="text-blue-400" >Box</span>
           </div>
       </div>
       <div className="flex flex-row gap-7 text-gray-400 border border-gray-600 rounded-md px-7 py-3">
