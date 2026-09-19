@@ -1,6 +1,10 @@
+"use client";
+import {Menu, X} from "lucide-react"
 import Link from "next/link";
+import {useState} from "react"
 
 export default function Navbar() {
+  const [isOpen,setIsOpen] = useState(false);
   return (
     <div className="font-sans h-30 p-11 flex flex-row items-center justify-between">
       <div className="flex flex-row gap-2 items-center justify-between">
@@ -9,13 +13,30 @@ export default function Navbar() {
             Coder<span className="text-blue-400" >Box</span>
           </div>
       </div>
-      <div className="flex flex-row gap-7 text-gray-400 border border-gray-600 rounded-md px-7 py-3">
+      <div className="hidden md:flex flex-row gap-7 text-gray-400 border border-gray-600 rounded-md px-7 py-3">
         <Link href="/">Home </Link>
         <Link href="/projects">Projects </Link>
         <Link href="/education">Education </Link>
         <Link href="/contact">Contact </Link>
       </div>
-      <button className="text-white border rounded-sm px-2 py-1 text-sm border-gray-700">Callback</button>
+      <button className="hidden md:flex text-white border rounded-sm px-2 py-1 text-sm border-gray-700">Callback</button>
+      <Menu className="text-white md:hidden" 
+      onClick={()=> {setIsOpen(!isOpen)}}> 
+      
+        </Menu>
+      {
+        isOpen && (
+          <div className="md:hidden fixed top-0 right-0 z-40 h-screen w-72 bg-zinc-950 p-12 text-white font-semibold shadow-xl">
+            <div className="flex flex-col items-start justify-start gap-5">
+              {isOpen ?  <X className="text-red-500 font-bold self-end-safe" onClick={()=> {setIsOpen(!isOpen)}} size={25}/> : <Menu size={25} />  }
+              <Link onClick={()=> {setIsOpen(!isOpen)}} href="/">Home</Link>
+              <Link onClick={()=> {setIsOpen(!isOpen)}} href="/projects">Projects</Link>
+              <Link onClick={()=> {setIsOpen(!isOpen)}} href="/education">Education</Link>
+              <Link onClick={()=> {setIsOpen(!isOpen)}} href="/contact">Contact</Link>
+            </div>
+          </div>
+        )
+      }
     </div>
   );
 }

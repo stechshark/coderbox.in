@@ -1,9 +1,9 @@
 export default function Education() {
   return (
     <div className="p-5 text-white font-mono">
-      <div className="flex gap-20 flex-row items-center justify-center">
+      <div className="flex gap-20 flex-col md:flex-row items-center justify-center">
         <div>
-          <img className="h-100" src="images/ed.png" alt="Priyanshu pfp" />
+          <img className="md:h-100 h-70" src="images/ed.png" alt="Priyanshu pfp" />
         </div>
         <div className="flex flex-col ">
           <h1 className="text-2xl font-semibold text-blue-400">Educational Background</h1>
