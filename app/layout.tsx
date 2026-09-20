@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"
+import Navtray from "@/components/Navtray"
 
 
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="min-h-screen bg-[url('/images/abs_blur.png')] bg-cover bg-center  bg-no-repeat">
           <Navbar/>
           {children}
+          <Navtray/>
         </div>
       </body>
     </html>

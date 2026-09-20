@@ -13,8 +13,8 @@ export default function Home() {
           I am a full stack developer creating solutions that actually matters
         </p>
       </div>
-      <div>
-        <p>Website is currently in development phase ! </p>
+      <div className="skills-section ">
+        
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import {useState} from "react"
 export default function Navbar() {
   const [isOpen,setIsOpen] = useState(false);
   return (
-    <div className="sticky top-0 font-sans h-30 p-11 flex flex-row items-center justify-between">
+    <div className="sticky top-0 font-sans h-25 p-11 flex flex-row items-center justify-between">
       <div className="flex flex-row gap-2 items-center justify-between">
         <div className="h-7 w-7 rounded-full bg-cover bg-center bg-[url('/images/logo.jpg')]"></div>
           <div className="font-mono font-semibold text-xl text-white">
