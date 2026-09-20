@@ -3,7 +3,7 @@ import {House, LaptopMinimalCheck, GraduationCap, MailPen } from "lucide-react"
 
 export default function Navtray() {
     return(
-        <div className="p-5 md:hidden flex flex-row items-center justify-around fixed bottom-0 w-full">
+        <div className="backdrop-blur-md p-5 md:hidden flex flex-row items-center justify-around fixed bottom-0 w-full">
             <Link href="/">
                 <House color="#ffffff" />
             </Link>

@@ -6,7 +6,7 @@ import {useState} from "react"
 export default function Navbar() {
   const [isOpen,setIsOpen] = useState(false);
   return (
-    <div className="sticky top-0 font-sans h-25 p-11 flex flex-row items-center justify-between">
+    <div className="backdrop-blur-md sticky top-0 font-sans h-20 p-11 flex flex-row items-center justify-between">
       <div className="flex flex-row gap-2 items-center justify-between">
         <div className="h-7 w-7 rounded-full bg-cover bg-center bg-[url('/images/logo.jpg')]"></div>
           <div className="font-mono font-semibold text-xl text-white">
@@ -27,7 +27,7 @@ export default function Navbar() {
       {
         isOpen && (
           
-          <div className="md:hidden fixed top-0 right-0 z-40 h-screen w-52 backdrop-blur-sm bg-black/50 p-12 text-white font-semibold shadow-xl">
+          <div className="md:hidden fixed top-0 right-0 z-40 h-screen w-52 bg-black p-12 text-white font-semibold shadow-xl">
             <div className="flex flex-col items-start justify-start gap-7 font-mono text-lg">
               {isOpen ?  <X className="text-red-500 font-bold self-end-safe" onClick={()=> {setIsOpen(!isOpen)}} size={25}/> : <Menu size={25} />  }
               <Link onClick={()=> {setIsOpen(!isOpen)}} href="/">Home</Link>
